@@ -1,0 +1,468 @@
+@import "./reset.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html, body{
+    font-family:'Inter';
+    letter-spacing:  -0.5px;
+    color: #171718;
+    
+}
+
+body {
+    background-image: url('./..//image/bg1.png');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Добавим позиционирование relative к body */
+    min-height: 100vh; /* Установим минимальную высоту равной высоте видимой области браузера */
+    
+}
+
+.body_about {
+    background-image: url('./..//image/bg2.png');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Добавим позиционирование relative к body */
+    min-height: 100vh; /* Установим минимальную высоту равной высоте видимой области браузера */
+    
+}
+
+.main_action {
+    background-image: url('./..//image/bg3.png');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Добавим позиционирование relative к body */
+    min-height: 100vh; /* Установим минимальную высоту равной высоте видимой области браузера */
+    
+}
+
+.container{
+    margin:0 auto;
+    padding:0 15px;
+    max-width: 1200px;
+    
+}
+
+/* Nav */
+
+.nav{
+    padding: 20px 0;
+    border-bottom: 3px solid #26292D;
+    background-color: #161617; 
+    color: #FFF;
+    top: 0;   
+    left: 0;   
+    z-index: 9999;   
+    width: 100%;   
+    height: 50px;
+    align-content: center;
+    
+    
+}
+
+.nav-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap:20px;
+    flex-wrap: wrap;
+    margin-right: -10em;
+    
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    margin-right: auto; /* Добавляем сдвиг влево */
+}
+
+
+
+.logo strong{
+    padding-left: 20px;
+    font-weight: 400;
+    letter-spacing:  0.1em;
+}
+
+
+.nav-list{
+    display: flex;
+    text-align: right;
+    column-gap: 35px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 2px solid #E16389; /* Обводка */
+    background-color: #81374D;
+    border-radius: 100px;    
+}
+
+.nav-list__link {
+	color: #fff; /* Цвет обычной ссылки */
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.nav-list__link:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 4px; 
+    background-color: #171718; 
+    transition: width 0.5s; /* Время эффекта */
+  }
+  
+  .nav-list__link:hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 4px; /* Высота линии */
+    background-color: #171718; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+      
+  }
+
+.nav-list__item {
+    padding: 10px; /* Увеличиваем расстояние между элементами списка */
+}
+
+.biography__text{
+    font-size: 36px;
+    font-weight: 600;
+    color:#FFF
+}
+
+.title-1{
+    font-size: 48px;
+    font-weight: 800;
+    color:#FFF
+}
+
+.title-2{
+    font-size: 48px;
+    font-weight: 800;
+    color:#FFF;
+    margin-bottom: 30px; /* Увеличение расстояния между заголовком и остальным текстом */
+}
+
+/* Header */
+
+.biography {
+    display: flex; /* Размещаем содержимое внутри флекс-контейнера */
+    flex-direction: row; /* Устанавливаем направление оси на горизонтальное */
+    align-items: center; /* Выравниваем содержимое по центру вертикально */
+}
+
+.biography__text{
+    text-align: left;
+}
+
+.image_bio {
+    margin-right: 50px; /* Отступ справа от картинки, чтобы создать пространство между картинкой и текстом */
+    margin-left: -120px; /* Отрицательный отступ слева для картинки */
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+}
+
+.about__text {
+    margin: 0 20px 30px; /* Добавляем отступы слева, справа и снизу */
+    font-size: 26px;
+    font-weight: 500;
+    color: #FFF;
+    flex: 1;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.image_about {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.action{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.main_container,
+.main_container_low {
+    margin: 20px;
+    max-width: 600px;
+    width: calc(50% - 40px);
+    text-align: center;
+    border: 3px solid #E16389; /* Обводка */
+    background-color: #81374D;
+    border-radius: 15px;
+    
+}
+
+.text,
+.text_low {
+    font-size: 24px;
+    font-weight: 600;
+    color:#FFF;
+    margin-bottom: 30px; /* Увеличение расстояния между заголовком и остальным текстом */
+}
+
+.text p,
+.text_low p {
+    font-size: 40px;
+    font-weight: 800;
+    color:#FFF;
+   
+}
+
+.image1 {
+    width: 300px;
+    display: block;
+    margin: auto; /* Центрируем изображение по горизонтали внутри контейнера */
+    padding-bottom: 15px;
+    padding-top: 25px;
+}
+
+.image2 {
+    width: 300px;
+    display: block;
+    margin: auto; /* Центрируем изображение по горизонтали внутри контейнера */
+    padding-bottom: 15px;
+}
+
+
+.contact_main {
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    min-height: 100vh; /* Минимальная высота на весь экран */
+    background-color: #4F1626;
+}
+
+.container {
+    text-align: center; /* Центрируем содержимое по горизонтали */
+}
+
+.content-list {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем отступы вокруг списка */
+    display: flex; /* Располагаем элементы списка в столбец */
+    flex-direction: column; /* Располагаем элементы списка друг под другом */
+    align-items: center; /* Центрируем элементы списка по горизонтали */
+}
+
+.content-list__item {
+    margin: 20px 0; /* Отступ между элементами списка */
+}
+
+.social__item {
+    margin: 0 10px; /* Отступ между изображениями соц-сетей */
+}
+
+.icon {
+    width: 50px; /* Ширина изображений соц-сетей */
+}
+
+.social {
+    font-size: 24px;
+    font-weight: 800;
+    color:#FFF;
+    margin-bottom: 20px; /* Отступ между заголовком и иконками соц. сетей */
+}
+.social-icons {
+    display: flex; /* Располагаем иконки соц. сетей в ряд */
+    margin-top: 10px; /* Отступ сверху между соц. сетями и заголовком */
+}
+
+.title-contact{
+    font-size: 40px;
+    font-weight: 800;
+    color:#E16389;
+    margin-bottom: 20px; /* Отступ между заголовком и контактной информацией */
+    padding-top: 25px;
+}
+
+
+.phone {
+    font-size: 24px;
+    font-weight: 800;
+    color:#FFF;
+    margin-bottom: 20px; /* Отступ между заголовком и контактной информацией */
+}
+
+.phone num{
+    font-size: 24px;
+    font-weight: 500;
+    color:#FFF;
+    margin-bottom: 20px; /* Отступ между заголовком и контактной информацией */
+    padding-top: 25px;
+}
+
+.map {
+    font-size: 24px;
+    font-weight: 800;
+    color:#FFF;
+    margin-bottom: 20px; /* Отступ между заголовком и контактной информацией */
+}
+
+.map-container{
+    padding-bottom: 50px;
+}
+
+/* Регистрация */
+
+.container_reg {
+    max-width: 400px;
+    padding-top: -50px;
+    border-radius: 5px;
+}
+
+.container_reg h2 {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    font-size: 18px;
+    letter-spacing: -0.5px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: #fff; /* Цвет текста метки */
+}
+
+/* Стилизация поля ввода */
+.container_reg input[type="text"],
+.container_reg input[type="email"],
+.container_reg input[type="password"] {
+    display: block;
+    width: calc(100% - 30px); /* Уменьшим ширину поля на величину отступа, чтобы сохранить внешний вид */
+    padding: 15px;
+    border: none;
+    border-radius: 100px;
+    border: 3px solid #81374D;
+    margin-bottom: 20px;
+    margin: 0 auto; /* Центрируем по горизонтали */
+    color: #fff; /* Цвет текста в поле ввода */
+}
+
+.container_reg input[type="text"]::placeholder,
+.container_reg input[type="email"]::placeholder,
+.container_reg input[type="password"]::placeholder {
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+    display: block; /* Делаем подсказку блочным элементом */
+    margin-top: -30px; /* Сдвигаем подсказку наверх */
+    margin-left: 20px; /* Выравниваем подсказку по левому краю */
+    color: #fff; /* Цвет подсказки */
+}
+
+
+button {
+    display: block; /* Делаем кнопку блочным элементом */
+    margin: 0 auto; /* Центрируем кнопку по горизонтали */
+    margin-top: 20px; /* Добавляем небольшой отступ сверху */
+    padding: 10px 20px;
+    background-color: #E16389;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 100px;
+}
+
+button:hover {
+    background-color: #04B2FE; /* Цвет фона */
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #04B2FE; /* Тень в виде рамки */
+}
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.registration-image {
+    display: block;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.section_reg {
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    min-height: 100vh; /* Минимальная высота на весь экран */
+    background-color: #171718;
+    margin-top: -70px; /* Добавляем отступ сверху */
+}
+
+.footer {
+    position: absolute; /* Позиционирование абсолютное */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    border-top: 3px solid #26292D;
+    background-color: #161617;   
+    z-index: 9999;   
+    align-content: center;
+}
+
